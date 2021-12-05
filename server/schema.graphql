@@ -5,7 +5,6 @@ type Query {
     company(id: ID!): Company
 }
 
-
 # type Mutation {
 #     createJob(
 #         companyId: ID, 
