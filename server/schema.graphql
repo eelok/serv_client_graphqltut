@@ -5,15 +5,14 @@ type Query {
     company(id: ID!): Company
 }
 
-# type Mutation {
-#     createJob(
-#         companyId: ID, 
-#         title: String, 
-#         description: String
-#     ): ID
-# }
+type Mutation {
+    createJob(
+        companyId: ID, 
+        title: String, 
+        description: String
+    ): ID
+}
 
-# //todo добавила job: Job
 type Company {
     id: ID!
     name: String

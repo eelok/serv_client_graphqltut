@@ -8,11 +8,11 @@ const Query = {
     company: (root, {id}) => db.companies.get(id),
 };
 
-// const Mutation = {
-//     createJob:(root, {companyId, title, description}) => {
-//         return db.jobs.create({companyId, title, description})
-//     }
-// }
+const Mutation = {
+    createJob:(root, {companyId, title, description}) => {
+        return db.jobs.create({companyId, title, description});
+    }
+}
 
 const Job = {
     company: (job) => db.companies.get(job.companyId)
@@ -24,4 +24,4 @@ const Company = {
 }
 
 
-module.exports = { Query, Job, Company };
+module.exports = { Query, Job, Company, Mutation };
